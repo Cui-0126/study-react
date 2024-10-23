@@ -7,7 +7,7 @@ export  function Headline(props) {
         
           <ol>
             <li>
-              Get started by editing <code>src/pages/{props.page}.tsx</code>.
+              Get started by editing {props.code}
             </li>
             <li>Save and see your changes instantly.</li>
           </ol>     

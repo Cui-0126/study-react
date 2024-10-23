@@ -1,30 +1,10 @@
-import Head from "next/head";
 import Image from "next/image";
-import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
-import Headter from "../components/Headter"
-import  { Footer } from "../components/Footer"
-import {Headline} from "../components/Headline"
+import {Headline} from "./Headline"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
-export default function Home() {
+export  function Major(props) {
   return (
-    <>
-      <Headter></Headter>
-
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
         <main className={styles.main}>
           <Image
             className={styles.logo}
@@ -34,7 +14,11 @@ export default function Home() {
             height={38}
             priority
           />
-          <Headline page="index"/>
+          <Headline page="index"
+          
+          code={<code>src/pages/index.tsx</code>}
+          
+          />
 
           <div className={styles.ctas}>
             <a
@@ -50,7 +34,7 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              Deploy now
+              {props.text} now
             </a>
             <a
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -58,14 +42,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.secondary}
             >
-              Read our docs
+               {props.memo} our docs
             </a>
           </div>
         </main>
         
-        <Footer />
-
-      </div>
-    </>
   );
 }
