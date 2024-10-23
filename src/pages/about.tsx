@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 import Headter from "@/components/Headter";
 import { Footer } from "@/components/Footer";
-import Headline from "@/components/Headline";
+import {Headline} from "@/components/Headline";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

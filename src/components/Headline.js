@@ -1,6 +1,6 @@
 
 
-export default function Headline(props) {
+export  function Headline(props) {
   return (
     <>
     <div>  
