@@ -3,6 +3,8 @@ import styles from "@/styles/Home.module.css";
 import Headter from "@/components/Headter";
 import { Footer } from "@/components/Footer";
 import {Major} from "../components/Major"
+import {Top} from "../components/Top";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Headter />
+      <Top />
 
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
