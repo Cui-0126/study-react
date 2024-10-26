@@ -4,7 +4,6 @@ import {Headline} from "./Headline"
 
 
 
-
 export  function Major(props) {
   return (
         <main className={styles.main}>
@@ -23,6 +22,7 @@ export  function Major(props) {
           />
 
           <div className={styles.ctas}>
+           
             <a
               className={styles.primary}
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
