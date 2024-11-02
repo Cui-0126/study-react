@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Footer.module.css";
+import styles from "src/components/Footer/Footer.module.css";
 
 const ITEMS = [
   {
@@ -27,22 +27,25 @@ export function Footer() {
     <>      
         <footer className={styles.footer}>
 
-          {ITEMS.map(item => {
+          {ITEMS.map((item,index) => {
             return (
               
-              <a
+              <a key={index}
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <Image 
               aria-hidden
               src={item.src}
               alt={item.alt}
               width={16}
               height={16}
             />
+            
             {item.strings}
+            
+            
           </a>
 
             )

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Top.module.css";
+import styles from "src/components/Top/Top.module.css";
 
 export function Top() {
   return (
