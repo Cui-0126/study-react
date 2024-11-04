@@ -4,6 +4,7 @@ import Headter from "src/components/Headter"
 import  { Footer } from "src/components/Footer"
 import {Major} from "src/components/Major"
 import {Top} from "src/components/Top";
+import { useCallback } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,9 +18,20 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const foo = 1;
+
+  const handleClick = useCallback ((e) => {
+    console.log(e.target.href);
+    e.preventDefault();
+    alert(foo);
+  }, []);
+
   return (
     <>
       <Headter></Headter>
+      <a href="/about" onClick={handleClick} >
+        ボタン
+      </a>
 
       <Top />
 
