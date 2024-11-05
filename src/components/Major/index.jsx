@@ -5,6 +5,7 @@ import { Headline } from "src/components/Headline"
 
 
 export  function Major(props) {
+  
   return (
         <main className={styles.main}>
           <Image

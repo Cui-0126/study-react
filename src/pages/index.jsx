@@ -4,7 +4,7 @@ import Headter from "src/components/Headter"
 import  { Footer } from "src/components/Footer"
 import {Major} from "src/components/Major"
 import {Top} from "src/components/Top";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,6 +25,15 @@ export default function Home() {
     e.preventDefault();
     alert(foo);
   }, []);
+
+  useEffect(() => {
+    console.log("マウント時");
+   document.body.style.backgroundColor = "lightblue";
+   return () => {
+    console.log("アンマウント時");
+    document.body.style.backgroundColor = "";
+   }
+  },[]);
 
   return (
     <>
