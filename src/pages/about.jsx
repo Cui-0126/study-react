@@ -4,9 +4,6 @@ import Headter from "src/components/Headter";
 import { Footer } from "src/components/Footer";
 import {Major} from "src/components/Major"
 import {Top} from "src/components/Top";
-import { useCounter } from "../hooks/useCounter";
-import { useInputArray } from "../hooks/useInputArray";
-import { useBgLightBlue } from "../hooks/useBgBlueLight";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,11 +16,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export default function About() {
-  const {count, isShow, handleClick, handleDisplay} = useCounter ();
-  const {text, array, handleChange, handleAdd} = useInputArray ();
-  useBgLightBlue ();
-
+export default function About({
+  count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd} )
+  
+  {  
   return (
     <>
       <Headter />
