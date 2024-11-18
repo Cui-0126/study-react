@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
-import styles from "src/styles/Home.module.css";
-import Headter from "src/components/Headter";
 import { Footer } from "src/components/Footer";
-import {Major} from "src/components/Major"
-import {Top} from "src/components/Top";
+import Headter from "src/components/Headter";
+import { Major } from "src/components/Major";
+import { Top } from "src/components/Top";
+import styles from "src/styles/Home.module.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,14 +17,14 @@ const geistMono = localFont({
 });
 
 export default function About({
-  count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd} )
+   doubleCount, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd} )
   
   {  
   return (
     <>
       <Headter />
 
-      {isShow ? <h1>{count}</h1>: null}
+      {isShow ? <h1>{doubleCount}</h1>: null}
       <button onClick={handleClick} > ボタン </button>
       <button onClick={handleDisplay} > {isShow ? "非表示" : "表示"} </button>
 
