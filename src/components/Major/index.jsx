@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { Headline } from "src/components/Headline";
 import styles from "src/components/Major/Major.module.css";
-import { Headline } from "src/components/Headline"
 
 
 
-export  function Major(props) {
+export const Major = (props) =>  {
   
   return (
         <main className={styles.main}>

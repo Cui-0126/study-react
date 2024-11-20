@@ -22,7 +22,7 @@ const ITEMS = [
 }
 ]
 
-export function Footer() {
+export const Footer = () =>  {
   return (
     <>      
         <footer className={styles.footer}>

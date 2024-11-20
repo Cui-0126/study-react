@@ -1,4 +1,4 @@
-import {useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 export const useInputArray = () => {
   const [text, setText] = useState("");
@@ -15,7 +15,7 @@ export const useInputArray = () => {
 
  const handleAdd = useCallback (() => {
   setArray( (prevArray) => {
-    if (prevArray.some (item => item === text )){
+    if (prevArray.includes(text)){
       alert ("同じ要素がすでに存在します");
       return prevArray;
     }

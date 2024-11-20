@@ -1,7 +1,8 @@
 import Head from "next/head";
 
 
-export default function Headter() {
+
+  export default function Headter() {
   return (
     <>
       <Head>
@@ -13,4 +14,4 @@ export default function Headter() {
       
     </>
   );
-}
+};

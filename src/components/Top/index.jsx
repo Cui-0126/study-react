@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "src/components/Top/Top.module.css";
 
-export function Top() {
+export const Top = () => {
   return (
       
         <top className={styles.top}>
